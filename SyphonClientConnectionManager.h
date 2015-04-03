@@ -84,6 +84,7 @@
 @property (readonly) NSDictionary *serverDescription;
 - (SyphonImage *)newFrameForContext:(CGLContextObj)context;
 @property (readonly) NSUInteger frameID;
+@property (readonly) IOSurfaceRef surface;
 @end
 
 #if defined(SYPHON_USE_CLASS_ALIAS)

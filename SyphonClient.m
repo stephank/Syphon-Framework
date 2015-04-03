@@ -160,4 +160,13 @@
 	return description;
 }
 
+- (IOSurfaceRef)surface
+{
+	IOSurfaceRef result;
+	OSSpinLockLock(&_lock);
+	result = ((SyphonClientConnectionManager *)_connectionManager).surface;
+	OSSpinLockUnlock(&_lock);
+	return result;
+}
+
 @end
